@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Campus - Resource Booking</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="dashboard-body">
+
+    <nav class="sidebar">
+        <div class="sidebar-brand">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <h2>SMART CAMPUS</h2>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="admin-dashboard.html"><i class="fa-solid fa-chart-pie"></i> Dashboard</a></li>
+            <li><a href="manage-complaints.html"><i class="fa-solid fa-clipboard-list"></i> Manage Complaints</a></li>
+            <li class="active"><a href="resource-booking.html"><i class="fa-solid fa-cubes"></i> Resource Booking</a>
+            </li>
+            <li><a href="analytics.html"><i class="fa-solid fa-chart-line"></i> Analytics</a></li>
+            <li><a href="settings.html"><i class="fa-solid fa-gears"></i> Settings</a></li>
+            <li class="logout"><a href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <header class="top-header">
+            <h2>Resource Management & Bookings</h2>
+            <div class="admin-profile">
+                <img src="https://via.placeholder.com/40" alt="Admin" class="avatar">
+            </div>
+        </header>
+
+        <section class="data-section">
+            <!-- Booking Requests -->
+            <div class="data-table-container">
+                <div class="panel-header">
+                    <h3>Incoming Allocation Requests</h3>
+                </div>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Resource</th>
+                            <th>Requested By</th>
+                            <th>Time/Slot</th>
+                            <th>Action Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Seminar Hall A</td>
+                            <td>Tech Club</td>
+                            <td>Tomorrow, 2PM - 5PM</td>
+                            <td>
+                                <button class="btn btn-primary"
+                                    style="background-color: var(--neon-green); margin-right:5px;">Approve</button>
+                                <button class="btn btn-table-action"
+                                    style="color:var(--neon-orange); border-color:var(--neon-orange)">Reject</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Projector Block-C</td>
+                            <td>Mech Dept</td>
+                            <td>Friday, 9AM - 11AM</td>
+                            <td>
+                                <button class="btn btn-primary"
+                                    style="background-color: var(--neon-green); margin-right:5px;">Approve</button>
+                                <button class="btn btn-table-action"
+                                    style="color:var(--neon-orange); border-color:var(--neon-orange)">Reject</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Asset Inventory Status Tracker -->
+            <div class="resource-panel">
+                <div class="panel-header">
+                    <h3>Asset Matrix</h3>
+                </div>
+                <div class="resource-list">
+                    <div class="resource-item"><span>Main Audio System</span><span
+                            class="badge badge-available">Operational</span></div>
+                    <div class="resource-item"><span>Chemistry Lab II</span><span class="badge badge-booked">In
+                            Use</span></div>
+                    <div class="resource-item"><span>DSLR Camera Kit</span><span class="badge badge-booked">In
+                            Use</span></div>
+                    <div class="resource-item"><span>Auditorium Lights</span><span
+                            class="badge badge-available">Operational</span></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="scirpt.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Campus - Settings</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Embedded styling rule for setup form fields quickly */
+        .form-group {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group label {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group select {
+            background: var(--bg-dark);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 12px;
+            border-radius: 6px;
+            color: #fff;
+            width: 100%;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body class="dashboard-body">
+
+    <nav class="sidebar">
+        <div class="sidebar-brand">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <h2>SMART CAMPUS</h2>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="admin-dashboard.html"><i class="fa-solid fa-chart-pie"></i> Dashboard</a></li>
+            <li><a href="manage-complaints.html"><i class="fa-solid fa-clipboard-list"></i> Manage Complaints</a></li>
+            <li><a href="resource-booking.html"><i class="fa-solid fa-cubes"></i> Resource Booking</a></li>
+            <li><a href="analytics.html"><i class="fa-solid fa-chart-line"></i> Analytics</a></li>
+            <li class="active"><a href="settings.html"><i class="fa-solid fa-gears"></i> Settings</a></li>
+            <li class="logout"><a href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <header class="top-header">
+            <h2>Portal Configuration</h2>
+            <div class="admin-profile"><img src="https://via.placeholder.com/40" alt="Admin" class="avatar"></div>
+        </header>
+
+        <section class="data-table-container" style="max-width: 600px; margin-top: 20px;">
+            <div class="panel-header" style="border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom:10px;">
+                <h3>System Parameters</h3>
+            </div>
+            <form style="margin-top: 20px;">
+                <div class="form-group">
+                    <label>Admin Notification Email Target</label>
+                    <input type="email" value="admin-alerts@campus.edu">
+                </div>
+                <div class="form-group">
+                    <label>Auto-Escalation Rule Trigger (High Priority)</label>
+                    <select>
+                        <option>24 Hours without response</option>
+                        <option>48 Hours without response</option>
+                        <option>Immediate Supervisor dispatch</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Maximum Booking Window Per User</label>
+                    <input type="text" value="3 Consecutive Hours Max">
+                </div>
+                <button type="button" class="btn btn-primary" style="margin-top: 10px;">Save System Values</button>
+            </form>
+        </section>
+    </main>
+    <script src="scirpt.js"></script>
+</body>
+
+</html>

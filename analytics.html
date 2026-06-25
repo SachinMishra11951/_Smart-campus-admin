@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Campus - Performance Analytics</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="dashboard-body">
+
+    <nav class="sidebar">
+        <div class="sidebar-brand">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <h2>SMART CAMPUS</h2>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="admin-dashboard.html"><i class="fa-solid fa-chart-pie"></i> Dashboard</a></li>
+            <li><a href="manage-complaints.html"><i class="fa-solid fa-clipboard-list"></i> Manage Complaints</a></li>
+            <li><a href="resource-booking.html"><i class="fa-solid fa-cubes"></i> Resource Booking</a></li>
+            <li><a href="analytics.html"><i class="fa-solid fa-chart-line"></i> Analytics</a></li>
+            <li class="active"><a href="settings.html"><i class="fa-solid fa-gears"></i> Settings</a></li>
+            <li class="logout"><a href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <header class="top-header">
+            <h2>Campus Diagnostics & Analytics</h2>
+            <div class="admin-profile"><img src="https://via.placeholder.com/40" alt="Admin" class="avatar"></div>
+        </header>
+
+        <section class="metrics-grid">
+            <div class="card card-purple">
+                <div class="card-info">
+                    <h3>2.4 Hours</h3>
+                    <p>Avg. First Response Time</p>
+                </div>
+            </div>
+            <div class="card card-blue">
+                <div class="card-info">
+                    <h3>412 Units</h3>
+                    <p>Monthly Asset Requests</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dummy Graphical Panels placeholders using CSS framework boxes -->
+        <section class="data-section">
+            <div class="data-table-container">
+                <div class="panel-header">
+                    <h3>Complaint Category Distribution</h3>
+                </div>
+                <div
+                    style="height: 200px; display: flex; align-items: flex-end; justify-content: space-around; padding: 20px 0;">
+                    <div style="width: 40px; height: 80%; background: var(--neon-blue); border-radius: 4px 4px 0 0;">
+                    </div>
+                    <div style="width: 40px; height: 45%; background: var(--neon-orange); border-radius: 4px 4px 0 0;">
+                    </div>
+                    <div style="width: 40px; height: 95%; background: var(--neon-purple); border-radius: 4px 4px 0 0;">
+                    </div>
+                    <div style="width: 40px; height: 30%; background: var(--neon-green); border-radius: 4px 4px 0 0;">
+                    </div>
+                </div>
+                <div
+                    style="display: flex; justify-content: space-around; color: var(--text-muted); font-size: 0.8rem; text-align: center;">
+                    <span>IT/WiFi</span><span>HVAC</span><span>Electricity</span><span>Facilities</span>
+                </div>
+            </div>
+
+            <div class="resource-panel">
+                <div class="panel-header">
+                    <h3>System Health Indicators</h3>
+                </div>
+                <p style="margin-bottom: 10px;">Database Status: <span style="color: var(--neon-green);">Online</span>
+                </p>
+                <p style="margin-bottom: 10px;">Server Load: <span>24%</span></p>
+                <p>SMTP Gateways: <span style="color: var(--neon-green);">Active</span></p>
+            </div>
+        </section>
+    </main>
+    <script src="scirpt.js"></script>
+</body>
+
+</html>
